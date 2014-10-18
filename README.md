@@ -164,5 +164,6 @@ welcome.
 
 ## Contact
 
+Project MySelf is started and maintained by Cornelius Schumacher.
 If you want to join in, have questions, or want to discuss the project, please
 don't hesitate to [contact me](mailto:schumacher@kde.org).
