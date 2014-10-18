@@ -62,3 +62,107 @@ Project MySelf is the attempt to solve this problem. Its goal is to create a
 system which makes it possible to collect data about yourself in a safe and
 private way, so that you control your data and you can decide what happens with
 it.
+
+## The Game Plan
+
+Data is acquired on many different devices. A server in the cloud is the
+convenient way to collect it. To ensure privacy the data will be encrypted on
+the client, and the server won't have the keys required to decrypt it. This way
+you can use cloud servers without having to trust them to not to look into the
+data. Using assymetric encryption clients writing data only need to know the
+public key used for encryption, and only clients which read the data need to
+have the private key required for decryption of data.
+
+The type of data which is in scope of this project is self-tracking data. This
+is data about yourself, which is recorded over time. It typically is a small
+amount of data acquired in regular intervals or on demand triggered by some
+activity. The most interesting use of the data usually is tracking it
+over time and correlating it with data from different sources or covering
+different aspects of your activity.
+
+Primary deliverable of Project MySelf is the definition of an API for clients to
+talk to the server, to send and synchronize data. The API includes the format
+of the containers of the data, the definition how to encrypt the data, and
+some conventions for the actual data payload. The goal of the API is to allow
+having alternative server implementation, and a multitude of clients.
+
+Another important deliverable of Project MySelf are reference implementations
+of the server and a client, and a test suite to validate conformance of server
+implementations to the API specification. The server should be easy to deploy.
+It is used by multiple clients, but only by a single user, so it does not have
+high scaling requirements.
+
+There will be several different clients:
+
+* Simple clients just sending data to server. They will run on special devices
+  depending on the kind of data they track.
+* Clients to show tracked data. These will read from the server and display
+  results to the user. This is an area for many interesting solutions, covering
+  different types of data, analyze and correlation of data, and sophisticated
+  ways of visualisation.
+* Clients to administrate the server. This could be a web interface running on
+  the server itself or a special client using the API remotely.
+* Importers to get data from an existing service and import it into the safe
+  and private storage of Project MySelf
+* Exporters to share selected data with others or to store it as backup.
+* Hybrid clients combining several or all of the areas above.
+
+The goal for the first step is to collect one specific type of data on multiple
+devices, store it safely on the server, and have a client to plot the data over
+time, per device or combined.
+
+## The Elements
+
+Project MySelf consists of a number of key elements. Each is a component living
+in its own git repository.
+
+The first element is the API specification. This will be hosted in the
+[main repository](https://github.com/cornelius/project-myself) along with any
+general documentation or other central material and code.
+
+The second element is the reference implementation of the server. Its name will
+be Mycroft.
+
+The third element is the reference client. It will be a command line client
+operating on the API and will include some simple data acquisition features.
+Its name will be Myer.
+
+The fourth element is a graphical client for display of data. This client will
+have access to all the data and will be the primary place for visualization and
+analysis of data. It will be called Myles.
+
+The fifth element is a client for mobile devices. It will acquire data from
+sensors on a phone and allow users to manually put in specific data. This client
+will be called Myla.
+
+Maybe we will need a separate client for administration of the server. This
+would have the name Mychael then.
+
+## Design Principles
+
+* The user owns and controls the data.
+* Data is encrypted before its transmitted and stored on the server, so that
+  there is no need to trust the server.
+* The client is assumed to be a trusted environment, where it is safe to store
+  secrets. The degree of trust necessary there is gradual and over time we might
+  introduce ways to also operate in a less trusted client environment.
+* Data can reliably and quickly be synchronized between clients
+* The API is the central specification. Alternative implementations of server
+  and client and integration with other services is desired and welcome.
+* The project is developed as free software in an iterative way.
+
+## Getting It Done
+
+There is some work ahead to make this project reality. Tasks are [tracked on
+Trello](https://trello.com/b/fjRMvDpB/project-myself).
+
+I will spend my time during [SUSE Hack Week 11](http://hackweek.suse.com) on
+making the first steps of the implementation.
+
+If you would like to join me or contribute in any way, you are more than
+welcome.
+
+## Contact
+
+If you want to join in, have questions, or want to discuss the project, please
+don't hesitate to [contact me](mailto:schumacher@kde.org).
