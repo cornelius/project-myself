@@ -125,7 +125,8 @@ be Mycroft.
 
 The third element is the reference client. It will be a command line client
 operating on the API and will include some simple data acquisition features.
-Its name will be Myer.
+Its name will be Myer. The code is in the
+[myer repository](https://github.com/cornelius/myer).
 
 The fourth element is a graphical client for display of data. This client will
 have access to all the data and will be the primary place for visualization and
