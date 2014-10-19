@@ -121,7 +121,9 @@ The first element is the API specification. This will be hosted in the
 general documentation or other central material and code.
 
 The second element is the reference implementation of the server. Its name will
-be Mycroft.
+be Mycroft. The code is in the
+[mycroft repository](https://github.com/cornelius/mycroft).
+
 
 The third element is the reference client. It will be a command line client
 operating on the API and will include some simple data acquisition features.
