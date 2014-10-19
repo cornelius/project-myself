@@ -35,11 +35,11 @@ text.
 
 ## Registering first admin client
 
-POST /admin/register/<pin>
+`POST /admin/register/<pin>` _(no authentication)_
 
 ### Parameters
 
-pin: four-digit identification number, obtained from operator of server
+`pin` four-digit identification number, obtained from operator of server
 
 ### Return
 
