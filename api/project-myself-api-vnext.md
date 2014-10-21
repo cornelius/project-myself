@@ -119,6 +119,61 @@ each bucket
 
 
 
+## Register client
+
+
+### Create registration token
+
+`POST /token` _(admin or user authentication)_
+
+#### Return
+
+Registration token
+
+#### Description
+
+A client can register other clients by creating a token and passing this token
+to the other client. The other client then has to use the `Register new user
+client` call to get access to the server.
+
+Tokens should expire after 15 minutes.
+
+All registration tokens can be tracked via the admin API.
+
+
+### Register new user client
+
+`POST /register/<token>` _(no authentication)_
+
+#### Parameter
+
+`token`: Token obtained by `Create registration token` call
+
+#### Return
+
+User client id and password
+
+#### Description
+
+The client is registered and gets the credentials it has to use for
+authentication in subsequent calls.
+
+All registered clients can be tracked via the admin API.
+
+
+
+## Bucket creation
+
+### Create new bucket
+
+`POST /data` _(user authentication)_
+
+#### Return
+
+Id of new bucket
+
+
+
 ## Access bucket items
 
 
@@ -222,57 +277,3 @@ Requested item
   "content": <encrypted content>
 }
 ```
-
-
-## Bucket creation
-
-### Create new bucket
-
-`POST /data` _(user authentication)_
-
-#### Return
-
-Id of new bucket
-
-
-
-## Register client
-
-
-### Create registration token
-
-`POST /token` _(admin or user authentication)_
-
-#### Return
-
-Registration token
-
-#### Description
-
-A client can register other clients by creating a token and passing this token
-to the other client. The other client then has to use the `Register new user
-client` call to get access to the server.
-
-Tokens should expire after 15 minutes.
-
-All registration tokens can be tracked via the admin API.
-
-
-### Register new user client
-
-`POST /register/<token>` _(no authentication)_
-
-#### Parameter
-
-`token`: Token obtained by `Create registration token` call
-
-#### Return
-
-User client id and password
-
-#### Description
-
-The client is registered and gets the credentials it has to use for
-authentication in subsequent calls.
-
-All registered clients can be tracked via the admin API.
