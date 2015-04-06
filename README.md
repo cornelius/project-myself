@@ -143,7 +143,7 @@ would have the name Mychael then.
 ## Design Principles
 
 * The user owns and controls the data.
-* Data is encrypted before its transmitted and stored on the server, so that
+* Data is encrypted before it is transmitted and stored on the server, so that
   there is no need to trust the server.
 * The client is assumed to be a trusted environment, where it is safe to store
   secrets. The degree of trust necessary there is gradual and over time we might
