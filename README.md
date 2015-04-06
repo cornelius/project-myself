@@ -158,8 +158,15 @@ would have the name Mychael then.
 There is some work ahead to make this project reality. Tasks are [tracked on
 Trello](https://trello.com/b/fjRMvDpB/project-myself).
 
-I will spend my time during [SUSE Hack Week 11](http://hackweek.suse.com) on
-making the first steps of the implementation.
+I spent my time during [SUSE Hack Week 11](http://hackweek.suse.com) on
+making the first steps of the implementation. I got a
+[running server](http://hackweek.blogspot.de/2014/10/running-server.html), a
+[running client](http://hackweek.blogspot.de/2014/10/running-client.html), and
+implemented the first version of
+[plotting data](http://hackweek.blogspot.de/2014/10/plotting.html).
+
+[Hack Week 12](http://hackweek.blogspot.de/2015/04/suse-hack-week-12.html) is
+just around the corner, and I plan to get more work done on this project.
 
 If you would like to join me or contribute in any way, you are more than
 welcome.
