@@ -1,10 +1,17 @@
 # Project MySelf API Specification
 
-This specification defines an API for storing private data on a server using
-client-side encryption. It supports clients only writing data and clients
+This specification defines an HTTP API for storing private data on a server
+using client-side encryption. It supports clients only writing data and clients
 reading and synchronizing data. Data is separated into buckets on the server.
 Each bucket contains a list of items. Access to buckets is controlled by client-
 side generated and managed keys.
+
+The scope of this specification is the communication between clients and server
+via JSON over HTTP. It includes the outer format of the actual data, which is
+carrying the user data as payload in encrypted form. The inner format of the
+data is opaque to the client-server API. To make it possible for clients to
+interoperate there is a separate specification of the full [data
+format](https://github.com/cornelius/project-myself/blob/master/project-myself-data-format-vnext.md).
 
 For more info about Project MySelf see the
 [README](https://github.com/cornelius/project-myself/blob/master/README.md).
