@@ -169,6 +169,18 @@ All registered clients can be tracked via the admin API.
 
 
 
+## Server status
+
+### Ping
+
+`GET /ping` _(user authentication)_
+
+#### Return
+
+`pong`
+
+
+
 ## Bucket creation
 
 ### Create new bucket
