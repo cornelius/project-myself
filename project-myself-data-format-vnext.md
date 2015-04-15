@@ -110,9 +110,20 @@ An example for a tagged data item is:
 ```
 
 This example sets the title of the data in the bucket to "Example title".
-The `title` tag is the only tag right which has a defined meaning in the
-current specification.
 
 Tagged data can be modified by writing a new item with a new value for the given
 tag. The latest value for a given tag in the linked list of outer items defines
 the current value of the tag.
+
+#### Special tags
+
+A number of tags have special meaning. They are not just informational, but
+modify the interpretation of the data.
+
+`title` sets a title for the data in the bucket. It can be used in plots and for
+similar purposes.
+
+`type` sets the type of the data in the bucket. This influences how data is
+processed for example on export to a CSV file. If the `type` tag is set to
+`json` the data is interpreted as quoted JSON and parsed before it is processed.
+For all other values the data is treated as opaque object and used literally.
