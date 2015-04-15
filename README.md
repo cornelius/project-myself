@@ -131,7 +131,8 @@ Its name will be Myer. The code is in the
 
 The fourth element is a graphical client for display of data. This client will
 have access to all the data and will be the primary place for visualization and
-analysis of data. It will be called Myles.
+analysis of data. It will be called Myles. The code is in the
+[myles repository](https://github.com/cornelius/myles).
 
 The fifth element is a client for mobile devices. It will acquire data from
 sensors on a phone and allow users to manually put in specific data. This client
