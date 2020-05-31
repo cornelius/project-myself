@@ -177,7 +177,7 @@ All registered clients can be tracked via the admin API.
 
 #### Return
 
-``json
+```json
 {
   "ping": "pong"
 }
